@@ -1,0 +1,80 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.martinfejes.archetypes</groupId>
+	<artifactId>javaee8-jsf</artifactId>
+	<version>1.0.0</version>
+	<name>Java EE 8 JSF Archetype</name>
+	<description>Maven Archetype for Java EE 8 JSF applications with JSF and JAX-RS</description>
+
+	<developers>
+		<developer>
+			<name>Martin Fejes</name>
+			<organization>martinfejes.com</organization>
+			<organizationUrl>https://martinfejes.com</organizationUrl>
+		</developer>
+	</developers>
+    <organization>
+		<name>Martin Fejes</name>
+		<url>https://martinfejes.com</url>
+	</organization>
+	<inceptionYear>2019</inceptionYear>
+    
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+	<build>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.archetype</groupId>
+				<artifactId>archetype-packaging</artifactId>
+				<version>3.0.1</version>
+			</extension>
+		</extensions>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-archetype-plugin</artifactId>
+					<version>3.0.1</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.0.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.1.0</version>
+				<configuration>
+					<addDefaultExcludes>false</addDefaultExcludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
